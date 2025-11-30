@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Boston Economic Embedding Explorer</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Vega libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <!-- Main loader (loads all datasets + interactions) -->
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Boston Economic Embeddings</h1>
+    <p>
+      Explore the tourism, labor, and housing embeddings. Brush any scatterplot
+      to filter the linked time-series and distribution views.
+    </p>
+  </header>
+
+  <main class="layout">
+
+    <!-- ███████ Tourism Section (Hadeel) -->
+    <section class="panel">
+      <h2>Tourism Embedding + Hotel Metrics</h2>
+      <div id="tourism-panel"></div>
+    </section>
+
+    <!-- ███████ Labor Section (Zaina) -->
+    <section class="panel">
+      <h2>Labor Embedding + Labor Metrics</h2>
+      <div id="labor-panel"></div>
+    </section>
+
+    <!-- ███████ Housing Section (Yusef) -->
+    <section class="panel">
+      <h2>Housing Embedding + Spatial / Housing View</h2>
+      <div id="housing-panel"></div>
+    </section>
+
+    <!-- ███████ Reused Linked View (Assignment 3) -->
+    <section class="panel">
+      <h2>Reused Linked View – Passengers vs Occupancy</h2>
+      <div id="a3-linked-panel"></div>
+    </section>
+
+  </main>
+
+  <!-- JS for each view (must come AFTER divs exist) -->
+  <script src="script.js"></script>           <!-- Hadeel -->
+  <script src="laborViews.js"></script>       <!-- Zaina -->
+  <script src="spatialViews.js"></script>     <!-- Yusef -->
+</body>
+</html>
